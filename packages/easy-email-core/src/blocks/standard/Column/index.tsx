@@ -47,7 +47,7 @@ export const Column = createBlock<IColumn>({
     return (
       <BasicBlock
         params={params}
-        tag='mj-column'
+        tag="mj-column"
       />
     );
   },

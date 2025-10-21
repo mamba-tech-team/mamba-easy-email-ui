@@ -55,7 +55,7 @@ export const Text = createBlock<IText>({
     return (
       <BasicBlock
         params={params}
-        tag='mj-text'
+        tag="mj-text"
       >
         {data.data.value.content}
       </BasicBlock>

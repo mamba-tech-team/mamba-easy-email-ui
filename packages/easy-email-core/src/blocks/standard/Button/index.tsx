@@ -74,7 +74,7 @@ export const Button = createBlock<IButton>({
     return (
       <BasicBlock
         params={params}
-        tag='mj-button'
+        tag="mj-button"
       >
         {data.data.value.content}
       </BasicBlock>

@@ -35,6 +35,8 @@ import { AdvancedType, IBlockData, JsonToMjml } from 'easy-email-core';
 import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
 import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmail';
 
+import '@demo/components/CustomBlocks';
+
 import 'easy-email-editor/lib/style.css';
 import 'easy-email-extensions/lib/style.css';
 import blueTheme from '@arco-themes/react-easy-email-theme/css/arco.css?inline';
@@ -44,6 +46,7 @@ import enUS from '@arco-design/web-react/es/locale/en-US';
 
 import { useShowCommercialEditor } from '@demo/hooks/useShowCommercialEditor';
 import { useWindowSize } from 'react-use';
+import { CustomBlocksType } from '@demo/components/CustomBlocks/constants';
 
 const defaultCategories: ExtensionProps['categories'] = [
   {
@@ -76,7 +79,7 @@ const defaultCategories: ExtensionProps['categories'] = [
       },
       {
         type: AdvancedType.TABLE,
-      },
+      }
     ],
   },
   {
@@ -108,6 +111,49 @@ const defaultCategories: ExtensionProps['categories'] = [
       },
     ],
   },
+  {
+    label: 'Custom',
+    active: true,
+    displayType: 'custom',
+    blocks: [
+      <BlockAvatarWrapper type={CustomBlocksType.PRODUCT_RECOMMENDATION}>
+        <div
+          style={{
+            position: 'relative',
+            border: '1px solid #ccc',
+            marginBottom: 20,
+            width: '80%',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          <img
+            src={
+              'https://cdn-res.mambasms.com/2025-10-17/68f1f48ae4b01d7a7ff96ee6.jpg'
+            }
+            style={{
+              maxWidth: '100%',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: 2,
+            }}
+          />
+        </div>
+      </BlockAvatarWrapper>,
+      <BlockAvatarWrapper type={CustomBlocksType.CUSTOM_HTML}>
+        <div style={{ padding: '10px', textAlign: 'center', border: '1px solid #ccc' }}>
+          <span>HTML Block</span>
+        </div>
+      </BlockAvatarWrapper>
+    ],
+  }
 ];
 
 export default function Editor() {

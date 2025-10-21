@@ -25,7 +25,6 @@ export default function MjmlBlock<T extends IBlockData>({
   if (!block) {
     throw new Error(`Can no find ${type}`);
   }
-
   const mergeValue = useMemo((): undefined | {} => {
     if (typeof children === 'string') {
       if (!value) {
@@ -37,10 +36,8 @@ export default function MjmlBlock<T extends IBlockData>({
         return value;
       }
     }
-
     return value;
   }, [children, value]);
-
   return (
     <>
       {block.render({

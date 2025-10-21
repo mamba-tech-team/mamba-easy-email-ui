@@ -7,6 +7,7 @@ export enum BasicType {
   COLUMN = 'column',
   GROUP = 'group',
   TEXT = 'text',
+  CUSTOM_HTML = 'custom-html',
   IMAGE = 'image',
   DIVIDER = 'divider',
   SPACER = 'spacer',

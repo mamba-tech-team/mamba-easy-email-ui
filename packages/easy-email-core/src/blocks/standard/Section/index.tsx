@@ -57,7 +57,7 @@ export const Section = createBlock<ISection>({
     return (
       <BasicBlock
         params={params}
-        tag='mj-section'
+        tag="mj-section"
       />
     );
   },

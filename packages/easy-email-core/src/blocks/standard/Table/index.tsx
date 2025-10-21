@@ -32,7 +32,7 @@ export const Table = createBlock<ITable>({
     return (
       <BasicBlock
         params={params}
-        tag='mj-table'
+        tag="mj-table"
       >
         {data.data.value.content}
       </BasicBlock>

@@ -9,7 +9,7 @@
     "dev": "next",
     "build": "npx prisma generate && next build",
     "start": "next start",
-    "update": "pnpm add easy-email-core@latest easy-email-editor@latest easy-email-extensions@latest easy-email-localization@latest",
+    "update": "npm add easy-email-core@latest easy-email-editor@latest easy-email-extensions@latest easy-email-localization@latest",
     "db:up": "docker-compose up -d",
     "db:down": "docker-compose down"
   },

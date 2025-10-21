@@ -38,7 +38,7 @@ export const Raw = createBlock<IRaw>({
     return (
       <BasicBlock
         params={params}
-        tag='mj-raw'
+        tag="mj-raw"
       >
         {params.data.data.value.content}
       </BasicBlock>

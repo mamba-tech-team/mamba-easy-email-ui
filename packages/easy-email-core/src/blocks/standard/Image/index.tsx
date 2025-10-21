@@ -48,7 +48,7 @@ export const Image: IBlock<IImage> = createBlock({
     return (
       <BasicBlock
         params={params}
-        tag='mj-image'
+        tag="mj-image"
       />
     );
   },

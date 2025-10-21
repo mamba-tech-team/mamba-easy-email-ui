@@ -92,7 +92,7 @@ export const Navbar: IBlock<INavbar> = createBlock({
 
   render(params) {
     const { data } = params;
-    const links = (data ).data.value.links
+    const links = (data).data.value.links
       .map((link, index) => {
         const linkAttributeStr = Object.keys(link)
           .filter((key) => key !== 'content' && link[key as keyof typeof link] !== '') // filter att=""

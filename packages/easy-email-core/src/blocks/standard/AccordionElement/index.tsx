@@ -48,6 +48,6 @@ export const AccordionElement = createBlock<IAccordionElement>({
   },
   validParentType: [BasicType.ACCORDION],
   render(params) {
-    return <BasicBlock params={params} tag='mj-accordion-element' />;
+    return <BasicBlock params={params} tag="mj-accordion-element" />;
   },
 });
